@@ -62,5 +62,3 @@ COPY --from=core /app/public /app/public
 # Start the server using supervisor
 EXPOSE 3000
 CMD ["supervisord", "-c", "supervisord.conf"]
-
-

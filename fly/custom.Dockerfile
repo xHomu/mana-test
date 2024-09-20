@@ -37,7 +37,7 @@ FROM base as runtime
 
 # Copy over built assets for production
 WORKDIR /app
-COPY package.json supervisord.conf ./
+COPY package.json ./
 COPY --from=production /app/node_modules /app/node_modules
 COPY --from=build /app/build /app/build
 COPY --from=build /app/public /app/public
